@@ -47,6 +47,22 @@
         const joined = `${greeting} ${name}`; // concatenate with template literal notation
         console.log(joined + ', how are you?'); // concatenate with the + operator
 
+        // Template literal exercises
+        const song = 'Fight the Youth';
+        const score = 9;
+        const highestScore = 10;
+        // template literals support JavaScript expressions
+        let output1 = `I like the song ${song}. I gave it a score of ${score/highestScore * 100}%.`;
+        console.log(output1);  // "I like the song Fight the Youth. I gave it a score of 90%."
+        // template literals respect line breaks
+        let output2 = `I like the song.
+            I gave it a score of 90%.`;
+        console.log(output2);  // I like the song.
+                      // I gave it a score of 90%.
+        // template literals support line break characters
+        const output3 = 'I like the song.\nI gave it a score of 90%.';
+        console.log(output3);  // I like the song.
+                      // I gave it a score of 90%.
     </script>
 </body>
 </html>
