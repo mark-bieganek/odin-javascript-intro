@@ -10,7 +10,7 @@
 <h1>View me in the console!</h1>
 <script>
 
-// Number exercises
+// NUMBERS
 console.log('Add two numbers together');
 console.log (23 + 97);
 
@@ -20,7 +20,7 @@ console.log (23 + 97 + 15 + 10 + 3 + 92);
 console.log('Print the solution to the following equation');
 console.log((4 + 6 + 9) / 77);
 
-// Variable exercises
+// VARIABLES
 let a = 10;
 console.log('Print the value of variable "a"');
 console.log(a);
@@ -32,7 +32,7 @@ let b = 7 * a; // this should return 'undefined'
 console.log('Print the value of variable "b"');
 console.log(b);
 
-// Constant exercises
+// CONSTANTS
 const max = 57;
 let actual = max - 13;
 let percentage = actual / max;
@@ -41,76 +41,107 @@ console.log(`variable "actual" = ${max} - 13`);
 console.log(`variable "percentage" = ${actual} / ${max}`);
 console.log('try typing "percentage" into the console to see its value');
 
-// Concatenating strings exercises
+// CONCATENATION
 const greeting = "Hello";
 const name = "Mark";
 const joined = `${greeting} ${name}`; // concatenate with template literal notation
 console.log(joined + ', how are you?'); // concatenate with the + operator
 
-// Template literal exercises
+// TEMPLATE LITERALS
 const song = 'Fight the Youth';
 const score = 9;
 const highestScore = 10;
+
 // template literals support JavaScript expressions
 let output1 = `I like the song ${song}. I gave it a score of ${score/highestScore * 100}%.`;
 console.log(output1);  // "I like the song Fight the Youth. I gave it a score of 90%."
+
 // template literals respect line breaks
 let output2 = `I like the song.
   I gave it a score of 90%.`;
 console.log(output2);  // I like the song.
    // I gave it a score of 90%.
+
 // template literals support line break characters
 const output3 = 'I like the song.\nI gave it a score of 90%.';
 console.log(output3);   // I like the song.
     // I gave it a score of 90%.
 
-// String methods and properties exercises
+// STRING METHODS AND PROPERTIES
 // most strings in JavaScript are objects with properties and methods available
-const browserType = 'mozilla';
+
 // get the length of a string
+const browserType = 'mozilla';
 console.log(`browserType is ${browserType.length} characters long`);
+
 // retrieve a specific character
 console.log(`the 2nd character in ${browserType} is ${browserType[1]}`);
+
 // retrieve the last character
 console.log(`the last character in ${browserType} is ${browserType[browserType.length - 1]}`);
+
 // retrieve a specific character
 console.log(`the 5th from last character in ${browserType} is ${browserType[browserType.length - 5]}`);
+
 // testing if a string contains a substring
 if (browserType.includes('zilla')) {
   console.log('Found zilla!');
 } else {
   console.log('No zilla here!');
 };
+
 // testing if a string starts with a substring
 if (browserType.startsWith('zilla')) {
   console.log('Found zilla!');
 } else {
   console.log('No zilla here!');
 };
+
 // testing if a string ends with a substring
 if (browserType.endsWith('zilla')) {
   console.log('Found zilla!');
 } else {
   console.log('No zilla here!');
 }
+
 // finding the position of a substring in a string
 const tagline = 'MDN - Resources for developers, by developers';
 console.log(tagline.indexOf('developers')); // 20
 console.log(tagline.indexOf('x')); // -1 will be output if the substring is not present
+
 // finding the first two occurrences of a substring in a string
 const firstOccurrence = tagline.indexOf('developers');
 const secondOccurrence = tagline.indexOf('developers', firstOccurrence + 1);
 console.log(firstOccurrence); // 20
 console.log(secondOccurrence); // 35
+
 // extracting a substring from a string
 const browserType2 = "mozilla"
 console.log(browserType2.slice(1, 4)); // "ozi"
+
 // shorthand of the same method, if starting at a character and extracting to the end
 console.log(browserType2.slice(2)); // "zilla"
+
 // extract the last # of characters from a string
 console.log(browserType2.slice(-4)); // "illa"
+
 // extract a substring from a string, starting at the end of the string
 console.log(browserType2.slice(-5, -2)); //zil
+
+// changing case
+const radData = 'My NaMe Is MuD';
+console.log(radData.toLowerCase());
+console.log(radData.toUpperCase());
+
+// replace part of a string
+const updated = browserType.replace('moz','van');
+console.log(updated);      // "vanilla"
+console.log(browserType);  // "mozilla"
+
+// replace all occurrences in a string
+let quote = 'To be or not to be';
+quote = quote.replaceAll('be','code');
+console.log(quote);  // "To code or not to code"
 
 </script>
 </body>
