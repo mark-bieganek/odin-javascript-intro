@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixing capitlization activity</title>
+</head>
+<body>
+  <h1>View me in the console!</h1>
+<script>
+
+// FIXING CAPITALIZATION ACTIVITY
+
+// In this exercise, we have the names of cities in the United Kingdom, 
+// but the capitalization is all messed up. We want you to change them 
+// so that they are all lowercase, except for a capital first letter.
+
+const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+for (const city of cities) {
+  let lowerCity = city.toLowerCase();
+  let upperCity = city.toUpperCase();
+  let result = `${upperCity.slice(0,1)}${lowerCity.slice(1)}`;
+  console.log(result);
+}
+
+
+</script>
+</body>
+</html>
