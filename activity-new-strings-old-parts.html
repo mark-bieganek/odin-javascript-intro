@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Making new strings from old parts</title>
+</head>
+<body>
+  <h1>View me in the console!</h1>
+<script>
+
+// MAKING NEW STRINGS FROM OLD PARTS ACTIVITY
+
+// In this exercise, the array contains a bunch of strings containing
+// information about train stations in the North of England. The strings 
+// are data items that contain the three-letter station code, followed 
+// by some machine-readable data, followed by a semicolon, followed by 
+// the human-readable station name. We want to extract the station code 
+// and name, and put them together in a string with the following 
+// structure: {CODE}: {Station Name}
+// for example...
+// MAN: Manchester Piccadilly
+
+
+
+const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for (const station of stations) {
+  // extract 3 letter station code
+  const stationCode = station.slice(0,2);
+  // extract station name, which always starts after the semicolon
+  // find the semicolon, and slice the remainder of the string to obtain station name
+  const stationName = station.slice(station.indexOf(";")+1);
+  // concatenate the extracted data and format for output
+  const result = `${stationCode.toUpperCase()}: ${stationName}`;
+  // output result to console
+  console.log(result);
+}
+
+
+</script>
+</body>
+</html>
