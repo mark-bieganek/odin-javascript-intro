@@ -7,7 +7,13 @@ This project showcases some exercises in working with numbers, variables, and st
 ## Project Goal - Part two
 This project showcases some activities in conditionals, and assignment.
 
+## Project Goal - Part three
+This project folder showcases activities with ternary operators, functions, and switch statements.
+
 ## Attribution
 This project was built using the lessons at The Odin Project:
 https://www.theodinproject.com/lessons/foundations-fundamentals-part-1
 https://www.theodinproject.com/lessons/foundations-fundamentals-part-2
+
+Some activities were sourced from MDN:
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/
