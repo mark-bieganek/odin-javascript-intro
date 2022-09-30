@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changing color theme</title>
+</head>
+<body>
+  <h1>Select a color theme!</h1>
+  <select name="theme" size="3">
+    <option value="white" selected>White</option>
+    <option value="black">Black</option>
+    <option value="random">Random</option>
+  </select>
+
+<script>
+
+// UPDATE COLOR THEME
+
+/* This exercise is an example of using ternary operators instead of
+if...else statements.
+*/
+const colors = [
+'black',
+'silver',
+'gray',
+'white',
+'maroon',
+'red',
+'purple',
+'fuchsia',
+'green',
+'lime',
+'olive',
+'yellow',
+'navy',
+'blue',
+'teal',
+'aqua',
+'orange',
+'aliceblue',
+'antiquewhite',
+'aquamarine',
+'azure',
+'beige',
+'bisque',
+'blanchedalmond',
+'blueviolet',
+'brown',
+'burlywood',
+'cadetblue',
+'chartreuse',
+'chocolate',
+'coral',
+'cornflowerblue',
+'cornsilk',
+'crimson',
+'cyan',
+'aqua',
+'darkblue',
+'darkcyan',
+'darkgoldenrod',
+'darkgray',
+'darkgreen',
+'darkgrey',
+'darkkhaki',
+'darkmagenta',
+'darkolivegreen',
+'darkorange',
+'darkorchid',
+'darkred',
+'darksalmon',
+'darkseagreen',
+'darkslateblue',
+'darkslategray',
+'darkslategrey',
+'darkturquoise',
+'darkviolet',
+'deeppink',
+'deepskyblue',
+'dimgray',
+'dimgrey',
+'dodgerblue',
+'firebrick',
+'floralwhite',
+'forestgreen',
+'gainsboro',
+'ghostwhite',
+'gold',
+'goldenrod',
+'greenyellow',
+'grey',
+'honeydew',
+'hotpink',
+'indianred',
+'indigo',
+'ivory',
+'khaki',
+'lavender',
+'lavenderblush',
+'lawngreen',
+'lemonchiffon',
+'lightblue',
+'lightcoral',
+'lightcyan',
+'lightgoldenrodyellow',
+'lightgray',
+'lightgreen',
+'lightgrey',
+'lightpink',
+'lightsalmon',
+'lightseagreen',
+'lightskyblue',
+'lightslategray',
+'lightslategrey',
+'lightsteelblue',
+'lightyellow',
+'limegreen',
+'linen',
+'magenta',
+'fuchsia',
+'mediumaquamarine',
+'mediumblue',
+'mediumorchid',
+'mediumpurple',
+'mediumseagreen',
+'mediumslateblue',
+'mediumspringgreen',
+'mediumturquoise',
+'mediumvioletred',
+'midnightblue',
+'mintcream',
+'mistyrose',
+'moccasin',
+'navajowhite',
+'oldlace',
+'olivedrab',
+'orangered',
+'orchid',
+'palegoldenrod',
+'palegreen',
+'paleturquoise',
+'palevioletred',
+'papayawhip',
+'peachpuff',
+'peru',
+'pink',
+'plum',
+'powderblue',
+'rosybrown',
+'royalblue',
+'saddlebrown',
+'salmon',
+'sandybrown',
+'seagreen',
+'seashell',
+'sienna',
+'skyblue',
+'slateblue',
+'slategray',
+'slategrey',
+'snow',
+'springgreen',
+'steelblue',
+'tan',
+'thistle',
+'tomato',
+'turquoise',
+'violet',
+'wheat',
+'whitesmoke',
+'yellowgreen',
+'rebeccapurple',
+'yellowgreen',
+'rebeccapurple'];
+
+const select = document.querySelector('select');
+const html = document.querySelector('html');
+document.body.style.padding = '10px';
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+function randomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+select.addEventListener('click', function() {
+  
+  // Put the selected color into a variable
+  const color = select.value;
+
+  switch (color) {
+    case "black" :
+      update('black', 'white');
+      break;
+    case "white" : 
+      update ('white', 'black');
+      break;
+    case "random" : 
+      update (randomColor(), randomColor());
+      break;
+    };
+  }
+)
+
+</script>
+</body>
+</html>
