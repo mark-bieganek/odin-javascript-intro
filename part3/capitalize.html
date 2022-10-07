@@ -48,7 +48,12 @@ are lowercase, UPPERCASE or BoTh.
 const input = document.getElementById('text');
 // Load the element we'll use to display the result.
 let output = document.getElementById('output');
-
+// Capitalize the user's input when the user types into the input field.
+input.addEventListener('input', () => {
+    output.textContent = capitalize(input.value);
+    output.style.visibility = 'visible';
+  }
+)
 
 function capitalize(str) {
   // This function capitalizes a string input.
