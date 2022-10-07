@@ -42,9 +42,15 @@
 Write a function called add7 that takes one number and returns that number + 7
 */
 
-const select = document.getElementById('number');
+// Load the input field the user will input their number into.
+const input = document.getElementById('number');
+// Load the element we'll use to display the result.
 let output = document.getElementById('output');
-select.addEventListener('input', () => {
+// Add 7 to the user's number when the user types into the input field.
+input.addEventListener('input', () => {
+  let add7 = (number) => Number(number) + 7;
+  output.textContent = add7(input.value);
+  // Toggle visibility of the output element.
   output.style.visibility = 'visible';
   }
 )
