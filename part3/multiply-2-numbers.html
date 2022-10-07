@@ -33,8 +33,8 @@
   <h1>Multiply2Numbers</h1>
   <p>Multiply any two numbers!</p>
   <label>Your numbers: </label>
-  <input type="number" id="number1" required min="0">
-  <input type="number" id="number2" required min="0">
+  <input type="number" id="number1" required min="0" value="10">
+  <input type="number" id="number2" required min="0" value="15">
   <p id="output"></p>
 <script>
 
@@ -44,6 +44,23 @@
 Write a function called multiply that takes 2 numbers and returns their product.
 */
 
+// Load the input field the user will input their number into.
+const input1 = document.getElementById('number1');
+const input2 = document.getElementById('number2');
+// Load the element we'll use to display the result.
+let output = document.getElementById('output');
+// Multiply the input numbers when the user types into either input field.
+input1.addEventListener('input', onClick);
+input2.addEventListener('input', onClick);
+
+function onClick() {
+  output.textContent = multiply2Numbers(input1.value, input2.value);
+  output.style.visibility = 'visible';
+}
+
+function multiply2Numbers(num1 = 0, num2 = 0) {
+  return Number(num1) * Number(num2)
+}
 
 </script>
 </body>
