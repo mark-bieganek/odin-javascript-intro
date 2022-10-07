@@ -5,12 +5,35 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Add7 Function</title>
+<style>
+
+  body {
+    font-family: helvetica, sans-serif;
+  }
+
+  label {
+    font-weight: bold;  
+  }
+
+  input[type="number"] {
+    padding: 5px;
+    width: 150px;
+  }
+
+  p#output {
+    background: #FFC125;
+    color: #5E2612;
+    padding: 10px;
+    visibility: hidden;
+  }
+
+  </style>
 </head>
 <body>
   <h1>Add7</h1>
-  <p>Enter a number, and I'll add 7 to it!</p>
-  <input type="number" id="number" required>
-  <div id="output" style="margin-top:1em; width:100px; text-align:center; background-color:yellow; padding: 2em; font-size:24px; font-weight:bold;"></div>
+  <p>Add seven to any number!</p>
+  <label>Your number: </label><input type="number" id="number" required>
+  <p id="output"></p>
 <script>
 
 // ADD7
@@ -21,6 +44,11 @@ Write a function called add7 that takes one number and returns that number + 7
 
 const select = document.getElementById('number');
 let output = document.getElementById('output');
+select.addEventListener('input', () => {
+  output.style.visibility = 'visible';
+  }
+)
+
 
 </script>
 </body>
