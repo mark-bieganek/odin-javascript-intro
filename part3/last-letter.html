@@ -43,6 +43,22 @@ Write a function called lastLetter that takes a string and returns the
 very last letter of that string:
 */
 
+// Load the input field the user will input their text into.
+const input = document.getElementById('text');
+// Load the element we'll use to display the result.
+let output = document.getElementById('output');
+// Return only the last letter of the user's input when the user types into the input field.
+input.addEventListener('input', () => {
+    output.textContent = lastLetter(removeSpaces(input.value));
+    output.style.visibility = 'visible';
+  }
+)
+
+function removeSpaces(str) {
+  // This function removes all spaces from a string input.
+  return str.replaceAll(' ','');
+}
+
 function lastLetter(str) {
   // This function returns only the last letter of a string input.
   return str.slice(-1);
