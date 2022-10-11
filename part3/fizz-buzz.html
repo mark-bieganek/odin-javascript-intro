@@ -32,6 +32,8 @@ for (let i = 1; i <= number; i++) {
   !(i % 3) && !(i % 5) ? console.log('Fizzbuzz') :
   // If the current number can be divided by 3, without remainder, print "Fizz".
   !(i % 3) ? console.log('Fizz') :
+  // If the current number can be divided by 5, without remainder, print "Buzz".
+  !(i % 5) ? console.log('Buzz') :
   // Else print the current number.
   console.log(i);
 }
