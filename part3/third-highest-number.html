@@ -31,9 +31,15 @@
 *    a. Parse the input values into an array
 *
 * 03. We need a way to find the third highest number.
-*    a. Sort the array with array.sort()
-*    b. Return the third from last array item (3rd highest number)
+*    a. Use array.sort to sort the numbers in the array.
+     b. Correct serialization.
+       i. Write a function isGreaterThan(number, input) that returns true if input > number.
+       ii. Iterate through the array and pass the numbers into the function, two-at-a-time.
+       iii. If result is truthy, use array.splice to remove and move item to end of array.
+       iv. repeat until the isGreaterThan is no longer truthy.
+*    c. Return the third from last array item (3rd highest number)
 */
+
 
 
 
