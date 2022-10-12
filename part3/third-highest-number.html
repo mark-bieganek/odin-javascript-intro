@@ -69,14 +69,15 @@
 
 const input = document.getElementById('btnSubmit');
 input.addEventListener('click', () => {
-    // Add the input elements to an array.
+    // Create an array to hold the user's numbers.
     const arrNumbers = [];
+    // Traverse the input elements and add them to the array.
     for (i = 1; i <= 10; i++) {
       const input = document.getElementById('number'+i);
       arrNumbers.splice(arrNumbers.length, 0, parseInt(input.value));
     };
 
-    // Sort the array.
+    // Sort the array, reducing the processing required to serialize it.
     arrNumbers.sort();
 
     // Serialize the output.
