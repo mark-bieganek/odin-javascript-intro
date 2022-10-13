@@ -50,7 +50,7 @@
 
   ** psuedocode**
   PROGRAM CounterGame
-  
+
       # INITIALIZE an array named arrPlayers with 10 player names, in
       the order that they're seated around the table. */  
       const arrPlayers = [
@@ -75,17 +75,22 @@
       let currentPlayer = 0;
 
       /*
-      # DEFINE a function named isDivisibleBy with parameters number
+      # DEFINE a function named isDivisible with parameters number
       and input. Return true if the supplied input number argument can
-      be divided by the supplied number input without remainder. 
+      be divided by the supplied number input without remainder. */
+      function isDivisible(byNumber = 0, input = 0) {
+        return input % byNumber;
+      }
+
+      /*
       # WHILE currentNumber is less than 100
         # LOOP through our player array, one at a time, starting from
         the first name.
           # PRINT the value of currentNumber.
-          # IF isDivisibleBy(11, currentNumber).
+          # IF isDivisible(11, currentNumber).
             # IF we aren't at the end of arrPlayers
               # MOVE 1 position ahead in the arrPlayer array.
-          # IF isDivisibleBy(7, currentNumber)
+          # IF isDivisible(7, currentNumber)
             # REVERSE the arrPlayers array, changing direction of
             play.
             # EXIT LOOP
