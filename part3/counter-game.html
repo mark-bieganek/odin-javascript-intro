@@ -68,7 +68,7 @@
       /*
       # INITIALIZE a numeric variable named currentNumber with an
       initial value of 1. */
-      let currentNumber = 1;
+      let currentNumber = 0;
       
       /* # INITIALIZE a numeric variable named currentPlayer with an 
       initial value of 0. */
@@ -83,15 +83,22 @@
 
       /*
       # COUNT from 1 to 100 */
-      while (currentNumber <= 100) {
+      while (currentNumber < 100) {
         /*
         # LOOP through our player array, one at a time, starting from
-        the first name.
+        the first player in the array. */
+        for (currentPlayer = 0; currentPlayer <= arrPlayers.length; currentPlayer++) {
+          /*
+          # INCREMENT currentNumber + 1 */
+          currentNumber++;
+          /*
           # PRINT the value of currentNumber. */
           console.log(currentNumber);
           /*
-          # IF currentNumber = 100
-            # EXIT LOOP
+          # End play if we're at 100. */
+          if (currentNumber === 100) {
+            break;
+          }
           /*
           # IF the currentNumber is divisible by 11 */
           if (isDivisible(11, currentNumber)) {
@@ -101,6 +108,7 @@
               currentPlayer += 1;
             } else {
               // Exit player loop.
+              break;
             };
           };
           /*
@@ -109,10 +117,9 @@
             // Reverse the direction of play.
             arrPlayers.reverse();
             // Exit player loop.
+            break;
           };
-        /*
-        # INCREMENT currentNumber + 1 */
-        currentNumber += 1;
+        };
       }
       /*
       # PRINT the currentPlayer name */
