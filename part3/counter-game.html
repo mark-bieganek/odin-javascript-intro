@@ -92,16 +92,24 @@
           /*
           # IF currentNumber = 100
             # EXIT LOOP
-          # IF isDivisible(11, currentNumber).
-            # IF we aren't at the end of arrPlayers
-              # MOVE 1 position ahead in the arrPlayer array.
+          /*
+          # IF the currentNumber is divisible by 11 */
+          if (isDivisible(11, currentNumber)) {
+            // If we aren't at the end of the arrPlayers array.
+            if (arrPlayers.length !== currentPlayer) {
+              // Skip the next player by moving 1 position ahead
+              currentPlayer += 1;
+            } else {
+              // Exit player loop.
+            };
+          };
           /*
           # IF the currentNumber is divisible by 7 */
           if (isDivisible(7, currentNumber)) {
             // Reverse the direction of play.
             arrPlayers.reverse();
             // Exit player loop.
-          }
+          };
         /*
         # INCREMENT currentNumber + 1 */
         currentNumber += 1;
