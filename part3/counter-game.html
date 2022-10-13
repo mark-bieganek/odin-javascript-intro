@@ -75,11 +75,10 @@
       let currentPlayer = 0;
 
       /*
-      # DEFINE a function named isDivisible with parameters number
-      and input. Return true if the supplied input number argument can
-      be divided by the supplied number input without remainder. */
+      # DEFINE a function that divides an input number by another
+      number. If no remainder, the function returns true */
       function isDivisible(byNumber = 0, input = 0) {
-        return input % byNumber;
+        return !(input % byNumber);
       }
 
       /*
