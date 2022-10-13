@@ -83,10 +83,16 @@
       }
 
       /*
-      # WHILE currentNumber is less than 100
+      # COUNT from 1 to 100 */
+      while (currentNumber <= 100) {
+        /*
         # LOOP through our player array, one at a time, starting from
         the first name.
-          # PRINT the value of currentNumber.
+          # PRINT the value of currentNumber. */
+          console.log(currentNumber);
+          /*
+          # IF currentNumber = 100
+            # EXIT LOOP
           # IF isDivisible(11, currentNumber).
             # IF we aren't at the end of arrPlayers
               # MOVE 1 position ahead in the arrPlayer array.
@@ -94,11 +100,10 @@
             # REVERSE the arrPlayers array, changing direction of
             play.
             # EXIT LOOP
-        # INCREMENT currentNumber + 1
-        # IF currentNumber = 100
-          # MOVE 1 position ahead in the arrPlayer array.
-          # SET currentPlayer = arrPlayers(index)
-      # LOOP WHILE
+        # INCREMENT currentNumber + 1 */
+        currentNumber += 1;
+      }
+      /*
       # PRINT the currentPlayer name
   END
   */
