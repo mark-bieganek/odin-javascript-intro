@@ -50,6 +50,7 @@
 
   ** psuedocode**
   PROGRAM CounterGame
+  
       # INITIALIZE an array named arrPlayers with 10 player names, in
       the order that they're seated around the table. */  
       const arrPlayers = [
@@ -64,11 +65,16 @@
         'Player 9', 
         'Player 10'
       ];
-  /*
+      /*
       # INITIALIZE a numeric variable named currentNumber with an
-      initial value of 1.
-      # INITIALIZE a numeric variable named currentPlayer with an 
-      initial value of 0.
+      initial value of 1. */
+      let currentNumber = 1;
+      
+      /* # INITIALIZE a numeric variable named currentPlayer with an 
+      initial value of 0. */
+      let currentPlayer = 0;
+
+      /*
       # DEFINE a function named isDivisibleBy with parameters number
       and input. Return true if the supplied input number argument can
       be divided by the supplied number input without remainder. 
