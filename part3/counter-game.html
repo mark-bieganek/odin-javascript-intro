@@ -48,7 +48,35 @@
       # Announce the player name that said "100".
   END
 
-  
+  ** psuedocode**
+  PROGRAM CounterGame
+      # INITIALIZE an array named arrPlayers with 10 player names, in
+      the order that they're seated around the table.
+      # INITIALIZE a numeric variable named currentNumber with an
+      initial value of 1.
+      # INITIALIZE a numeric variable named currentPlayer with an 
+      initial value of 0.
+      # DEFINE a function named isDivisibleBy with parameters number
+      and input. Return true if the supplied input number argument can
+      be divided by the supplied number input without remainder. 
+      # WHILE currentNumber is less than 100
+        # LOOP through our player array, one at a time, starting from
+        the first name.
+          # PRINT the value of currentNumber.
+          # IF isDivisibleBy(11, currentNumber).
+            # IF we aren't at the end of arrPlayers
+              # MOVE 1 position ahead in the arrPlayer array.
+          # IF isDivisibleBy(7, currentNumber)
+            # REVERSE the arrPlayers array, changing direction of
+            play.
+            # EXIT LOOP
+        # INCREMENT currentNumber + 1
+        # IF currentNumber = 100
+          # MOVE 1 position ahead in the arrPlayer array.
+          # SET currentPlayer = arrPlayers(index)
+      # LOOP WHILE
+      # PRINT the currentPlayer name
+  END
   */
 
 </script>
