@@ -23,8 +23,10 @@
   ** create an algorithm **
   # play ends when all disks are stacked on the right-most tower
   # start with the smallest disk
-  # if it can be moved to an empty tower on the right, do it
-  # if it can be moved to an empty tower on the left, do it
+  # if it can be moved to an empty tower two places to the right, move it there
+  # if it can be moved to an empty tower one place to the right, move it there
+  # if it can be moved to an empty tower two places on the left, move it there
+  # if it can be moved to an empty tower one place to the left, move it there
   # otherwise, if it can be moved to an existing stack on the right, do it 
   # otherwise, if it can be moved to an existing stack on the left, do it
   # repeat for disk 2
@@ -35,19 +37,14 @@
   Towers: T1, T2, T3.
   Disks:  D1, D2, D3.
   # T1:D3/D2/D1   T2:         T3:
-  # T1:D3/D2      T2:D1       T3: 
-  # T1:D3         T2:D1       T3:D2
-  # T1:D3         T2:         T3:D2/D1
-  # T1:           T2:D3       T3:D2/D1
-  # T1:D1         T2:D3       T3:D2
-  # T1:D1         T2:D3/D2    T3:
-  # T1:           T2:D3/D2    T3:D1
-  # T1:D2         T2:D3       T3:D1
-  # T1:D2/D1      T2:D3       T3:
-  # T1:D2/D1      T2:         T3:D3
-  # T1:D2         T2:D1       T3:D3
-  # T1:           T2:D1       T3:D3/D2
+  # T1:D3/D2      T2:         T3:D1
+  # T1:D3         T2:D2       T3:D1
+  # T1:D3         T2:D2/D1    T3:
+  # T1:           T2:D2/D1    T3:D3
+  # T1:D1         T2:D2       T3:D3
+  # T1:D1         T2:         T3:D3/D2
   # T1:           T2:         T3:D3/D2/D1
+
   # Game End
 
   ** create psuedocode** 
