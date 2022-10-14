@@ -29,7 +29,35 @@
   # repeat for disk 3
   # repeat all of the above until the game has ended
 
-  ** create psuedocode**
+  ** diagram the algorithm **
+  Towers: T1, T2, T3.
+  Disks:  D1, D2, D3.
+  # Initial setup.	        T1:D3/D2/D1	  T2:  		    T3:
+  # Move D1 from T1 to T2.  T1:D3/D2   	  T2:D1  	    T3:
+  # Move D2 from T1 to T3.  T1:D3   	    T2:D1  	    T3:D2
+  # Move D1 from T2 to T3.  T1:D3	        T2:		      T3:D2/D1
+  # Move D3 from T1 to T2.  T1:		        T2:D3		    T3:D2/D1
+  # Move D1 from T3 to T1.  T1:D1	        T2:D3		    T3:D2
+  # Move D2 from T3 to T2.  T1:D1	        T2:D3/D2    T3:
+  # Move D1 from T1 to T2.  T1:		        T2:D3/D2/D1	T3:
+  # Move D1 from T2 to T3.  T1:		        T2:D3/D2	  T3:D1
+  # Move D2 from T2 to T1.  T1:D2		      T2:D3		    T3:D1
+  # Move D1 from T3 to T2.  T1:D2		      T2:D3/D1    T3:
+  # Move D2 from T1 to T3.  T1: 		      T2:D3/D1    T3:D2
+  # Move D1 from T2 to T3.  T1:   	      T2:D3       T3:D2/D1
+  # Move D3 from T2 to T1.  T1:D3  	      T2:         T3:D2/D1
+  # Move D1 from T3 to T2.  T1:D3  	      T2:D1       T3:D2
+  # Move D2 from T3 to T1.  T1:D3/D2  	  T2:D1       T3:
+  # Move D1 from T2 to T3.  T1:D3/D2  	  T2:         T3:D1
+  # Move D2 from T1 to T2.  T1:D3     	  T2:D2       T3:D1
+  # Move D1 from T3 to T2.  T1:D3     	  T2:D2/D1    T3:
+  # Move D3 from T1 to T3.  T1:        	  T2:D2/D1    T3:D3
+  # Move D1 from T2 to T1.  T1:D1      	  T2:D2       T3:D3
+  # Move D2 from T2 to T3.  T1:D1      	  T2:         T3:D3/D2
+  # Move D1 from T1 to T3.  T1:       	  T2:         T3:D3/D2/D1
+  # Game End
+
+  ** create psuedocode** 
 
   */
 
